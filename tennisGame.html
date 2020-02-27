@@ -59,11 +59,12 @@
 
         ballReset = () => {
             if(player1Score >= WINNING_SCORE || player2Score >= WINNING_SCORE) {
+                //if either player reach winning score the condition is meet
                 player1Score = 0;
                 player2Score = 0;
                 showingWinScreen = true;
             }
-            ballSpeedX = -ballSpeedX;
+            ballSpeedX = -ballSpeedX; //when the ball bounce back from the paddle
             ballX = canvas.width/2;
             ballY = canvas.height/2
         }

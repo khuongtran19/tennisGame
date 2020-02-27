@@ -5,20 +5,20 @@
         var canvasContext;
         var ballX = 50;
         var ballY = 50;
-        var ballSpeedX = 10;
-        var ballSpeedY = 4;
+        var ballSpeedX = 10; //bball speed in horizontal
+        var ballSpeedY = 4; //ball speed in vertical
 
-        var player1Score = 0;
-        var player2Score = 0;
-        const WINNING_SCORE = 10;
+        var player1Score = 0; //player 1 score start at 0 
+        var player2Score = 0; //player 2 score start at 0
+        const WINNING_SCORE = 10; //if any player reach WINNING_SCORE first the game will end
 
         var showingWinScreen = false;
 
         var paddle1Y = 250;
         var paddle2Y = 250;
 
-        const PADDLE_THICKNESS = 5;
-        const PADDLE_HEIGHT = 100;
+        const PADDLE_THICKNESS = 5; //width of the paddle
+        const PADDLE_HEIGHT = 100; //height of the paddle
 
         calculateMousePos = (evt) => {
             var rect = canvas.getBoundingClientRect();
@@ -44,7 +44,7 @@
             canvasContext = canvas.getContext('2d');
 
             var framesPerSecond = 30;
-            setInterval(()=> {
+            setInterval(()=> { //speed run of the game
                 moveEverything();
                 drawEverything();
             }  , 1000/framesPerSecond);
